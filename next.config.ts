@@ -1,14 +1,17 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const withPWA = require('next-pwa')({
-  dest: 'public', // Destination directory for the service worker
-  register: true, // Register the service worker
-  skipWaiting: true, // Install new service worker immediately
-  disable: process.env.NODE_ENV === 'development', // Disable PWA in development
+// 1. Import withPWA
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
 });
 
-const nextConfig: NextConfig = {
-  /* config options here */
+// 2. Your regular Next.js config
+const nextConfig = {
+  reactStrictMode: true,
+  // ... any other config you have
 };
 
-export default nextConfig;
+// 3. Wrap your config with withPWA
+module.exports = withPWA(nextConfig);

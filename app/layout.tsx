@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -20,27 +20,17 @@ export const metadata: Metadata = {
   applicationName: "CUK Convocation Entry System", // Name for installed web apps
   manifest: "/manifest.json",
 
-  // --- Viewport & Theme ---
-  
   // --- Open Graph Metadata (for Facebook, LinkedIn, Pinterest, WhatsApp, etc.) ---
   openGraph: {
     title: "CUK Convocation 2025 Entry System", // Title shown when shared
     description: "Online Entry System for The Central University of Kerala Convocation 2025.", // Description shown when shared
     url: "https://cukconvocation.vercel.app", // *** REPLACE with your actual deployed website URL ***
     siteName: "CUK Convocation Entry System",
-    
+
     locale: "en_IN", // Specifies the language/region
     type: "website", // Type of content (can be 'article', etc.)
   },
 
-  // --- Twitter Card Metadata (for Twitter/X previews) ---
-  // twitter: {
-  //   card: "summary_large_image", // Type of card ('summary', 'summary_large_image', 'app', 'player')
-  //   title: "CUK Convocation 2025 Registration", // Title shown on Twitter
-  //   description: "Register online for the Central University of Kerala Convocation 2025.", // Description shown on Twitter
-  //   // creator: "@yourTwitterHandle", // Optional: Your Twitter handle
-  //   images: ["https://your-website-url.com/twitter-image.png"], // *** REPLACE with a URL to a Twitter preview image (e.g., square or rectangular based on card type) ***
-  // },
 
   // --- Icons ---
   icons: {
@@ -63,6 +53,11 @@ export const metadata: Metadata = {
   },
 };
 
+
+// ADD this new const for Viewport
+export const viewport: Viewport = {
+  themeColor: "#000000", // <-- ADD themeColor here
+};
 export default function RootLayout({
   children,
 }: Readonly<{
