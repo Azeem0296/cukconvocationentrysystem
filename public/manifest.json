@@ -1,0 +1,15 @@
+{
+  "name": "Secure QR Code Entry System for CUK Convocation 2025",
+  "short_name": "CUK QR Entry System",
+  "description": "Secure QR Code Entry System for University Convocation 2025",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icons/logo.png",
+      "type": "image/png"
+    }
+  ]
+}

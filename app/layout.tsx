@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Entry System for Convocation 2025 of The Central University of Kerala .", // Search result snippet
   keywords: ["CUK", "Central University of Kerala", "Convocation", "Registration", "Graduation", "Kerala", "University"], // Keywords for SEO (less critical now but still useful)
   applicationName: "CUK Convocation Entry System", // Name for installed web apps
+  manifest: "/manifest.json",
 
   // --- Viewport & Theme ---
   
