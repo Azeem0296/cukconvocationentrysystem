@@ -90,10 +90,20 @@ function ConfirmationModal({
                 />
                 <InfoRow label="Department" value={studentInfo.dept} />
                 <InfoRow
-                  label="Guests"
+                  label="Guardians"
                   value={studentInfo.guest_count}
                   isMono
                 />
+                { studentInfo.guest_1_name ? <InfoRow
+                  label="Guardian 1"
+                  value={studentInfo.guest_1_name}
+                  isMono
+                /> : <></> }
+                { studentInfo.guest_2_name ? <InfoRow
+                  label="Guardian 2"
+                  value={studentInfo.guest_2_name}
+                  isMono
+                /> : <></> }
               </div>
             </div>
             {/* Action */}
