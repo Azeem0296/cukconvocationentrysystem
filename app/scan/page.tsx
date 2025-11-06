@@ -88,22 +88,23 @@ function ConfirmationModal({
                   value={studentInfo.roll_no}
                   isMono
                 />
-                <InfoRow label="Department" value={studentInfo.dept} />
+                <InfoRow label="Programme" value={studentInfo.programme} />
+                <InfoRow label="Year of Passing" value={studentInfo.year_of_passing} />
                 <InfoRow
                   label="Guardians"
                   value={studentInfo.guest_count}
                   isMono
                 />
-                { studentInfo.guest_1_name ? <InfoRow
+                {studentInfo.guest_1_name ? <InfoRow
                   label="Guardian 1"
                   value={studentInfo.guest_1_name}
                   isMono
-                /> : <></> }
-                { studentInfo.guest_2_name ? <InfoRow
+                /> : <></>}
+                {studentInfo.guest_2_name ? <InfoRow
                   label="Guardian 2"
                   value={studentInfo.guest_2_name}
                   isMono
-                /> : <></> }
+                /> : <></>}
               </div>
             </div>
             {/* Action */}

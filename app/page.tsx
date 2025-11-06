@@ -68,14 +68,12 @@ function GoogleSignInButton() {
     setIsLoading(true);
     setError(null);
     
-    // This redirects to your new setup page
-    const redirectTo = `${window.location.origin}/scanner-setup`;
 
     // Use Supabase OAuth sign-in
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: redirectTo, // <-- Redirects to /scanner-setup
+        redirectTo: `${window.location.origin}/scanner-setup`, // <-- Redirects to /scanner-setup
       },
     });
 
